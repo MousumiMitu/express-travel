@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from "../../App";
 import "./Header.css";
 
 const Header = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   return (
     <div className="header-section">
       <div className="logo-box">
@@ -15,15 +17,15 @@ const Header = () => {
           </li>
           <li>Destination</li>
           <li>Contact</li>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
         </ul>
-        {/* <div className="btn-box">
-          <Link to="/login">
-            <button>Login</button>
-          </Link>
-        </div> */}
+        <div className="btn-box">
+          {loggedInUser && <button> {loggedInUser.name}</button>}
+          {!loggedInUser && (
+            <button>
+              <Link to="/login">login</Link>
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );

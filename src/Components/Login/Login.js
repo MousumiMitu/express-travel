@@ -47,7 +47,6 @@ const Login = () => {
     let isFieldValid = true;
     if (e.target.name === "email") {
       isFieldValid = /\S+@\S+\.\S+/.test(e.target.value);
-      // console.log(isEmailValid);
     }
     if (e.target.name === "password") {
       const isPasswordValid = e.target.value.length > 6;
@@ -85,10 +84,15 @@ const Login = () => {
         .auth()
         .signInWithEmailAndPassword(user.email, user.password)
         .then((res) => {
-          const newUserInfo = { ...user };
+          const { displayName, email } = res.user;
+          let newUserInfo = { ...user };
+          newUserInfo = { name: displayName, email };
           newUserInfo.error = "";
           newUserInfo.success = true;
           setUser(newUserInfo);
+          console.log(newUserInfo);
+          setLoggedInUser(newUserInfo);
+          history.replace(from);
           console.log("sign in user info ", res.user);
         })
         .catch((error) => {

@@ -12,10 +12,11 @@ export const UserContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
+  console.log(loggedInUser);
   return (
     <div className="App">
       <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-        <p>Name: {loggedInUser.name}</p>
+        {/* <p>name: {loggedInUser.name}</p> */}
         <Router>
           <Header />
           <Switch>

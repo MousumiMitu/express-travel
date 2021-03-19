@@ -1,0 +1,27 @@
+.details-section {
+  width: 90%;
+  margin: 0 auto;
+}
+.details-part {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+.destination-form {
+  width: 25%;
+  background-color: rgb(235, 230, 232);
+  padding: 15px;
+  border-radius: 5px;
+  margin-right: 25px;
+}
+.destination-form input {
+  padding: 8px;
+  font-size: 15px;
+  margin: 15px 0;
+  outline: none;
+  border: none;
+  width: 90%;
+}
+.map-area {
+  width: 65%;
+}
