@@ -1,0 +1,32 @@
+.header-section {
+  width: 87%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
+}
+.logo-box {
+  margin: auto 0;
+}
+.nav-lists {
+  display: flex;
+}
+.nav-lists ul {
+  display: flex;
+  margin: auto 0;
+}
+.nav-lists ul li {
+  list-style: none;
+  font-size: 17px;
+  font-weight: bold;
+  margin-right: 25px;
+}
+.btn-box {
+  margin: auto 0;
+}
+.btn-box button {
+  padding: 5px 13px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+}

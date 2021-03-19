@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "imgUrl": "https://i.ibb.co/HtLW4f8/Frame.png",
+    "fare1": 80,
+    "fare2": 120,
+    "fare3": 150,
+    "name": "Motorcyle"
+  },
+  {
+    "id": 2,
+    "imgUrl": "https://i.ibb.co/1ZDLt6p/Frame-2.png",
+    "fare1": 150,
+    "fare2": 200,
+    "fare3": 350,
+    "name": "Car"
+  },
+  {
+    "id": 3,
+    "imgUrl": "https://i.ibb.co/sJGyF5c/Frame-1.png",
+    "fare1": 10,
+    "fare2": 50,
+    "fare3": 80,
+    "name": "Bus"
+  },
+  {
+    "id": 4,
+    "imgUrl": "https://i.ibb.co/vjG2C7K/Group.png",
+    "fare1": 100,
+    "fare2": 200,
+    "fare3": 350,
+    "name": "Train"
+  }
+]

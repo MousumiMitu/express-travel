@@ -1,7 +1,7 @@
 body {
-  background-image: url("./bggg.jpg");
+  background-image: url("./images/backg1.jpg");
 
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: unset;
+  /* background-position: unset; */
 }
