@@ -1,0 +1,15 @@
+.cart-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* width: 300px; */
+}
+.main-section {
+  background-image: url("../../images/backg1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.main-container {
+  width: 87%;
+  margin: 0 auto;
+}

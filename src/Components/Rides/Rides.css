@@ -1,0 +1,23 @@
+.card-box {
+  margin: 100px auto;
+  width: 230px;
+  height: 220px;
+
+  padding: 10px;
+  background: rgba(2, 83, 90, 0.89);
+  border-radius: 10px;
+}
+.img-box {
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-box img {
+  width: 60%;
+}
+.name-field {
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+}

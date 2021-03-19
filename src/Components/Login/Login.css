@@ -1,0 +1,25 @@
+.login-area {
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 20px;
+}
+.form-section {
+  width: 35%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-btn button {
+  outline: none;
+  border: none;
+  background-color: white;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 15px;
+}

@@ -3,7 +3,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .logo-box {
   margin: auto 0;
