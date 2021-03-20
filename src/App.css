@@ -1,3 +1,6 @@
 .App {
-  /* background-position: unset; */
+  background-image: url("./images/backg1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }

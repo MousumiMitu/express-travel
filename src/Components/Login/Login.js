@@ -93,7 +93,6 @@ const Login = () => {
           console.log(newUserInfo);
           setLoggedInUser(newUserInfo);
           history.replace(from);
-          console.log("sign in user info ", res.user);
         })
         .catch((error) => {
           const newUserInfo = { ...user };

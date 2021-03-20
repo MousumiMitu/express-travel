@@ -1,11 +1,11 @@
 .card-box {
-  margin: 100px auto;
+  margin: 130px auto;
   width: 230px;
   height: 220px;
-
   padding: 10px;
-  background: rgba(2, 83, 90, 0.89);
+  background: rgb(240, 243, 243);
   border-radius: 10px;
+  box-shadow: 2px 2px 30px rgb(71, 71, 70);
 }
 .img-box {
   height: 170px;
@@ -17,7 +17,28 @@
   width: 60%;
 }
 .name-field {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   text-align: center;
-  color: white;
+
+  color: rgb(2, 56, 38);
+}
+.name-field h3 {
+  font-size: 20px;
+}
+
+@media (max-width: 598px) {
+  .card-box {
+    margin: 30px auto;
+    width: 300px;
+    height: 280px;
+  }
+  .img-box img {
+    width: 70%;
+  }
+  .name-field {
+    margin-top: 40px;
+  }
+  .name-field h3 {
+    font-size: 25px;
+  }
 }

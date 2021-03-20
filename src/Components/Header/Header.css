@@ -1,32 +1,28 @@
 .header-section {
+  background-color: rgba(238, 230, 238, 0.781);
+}
+.navbar-width {
   width: 87%;
   margin: 0 auto;
+}
+.flex-navbar {
   display: flex;
   justify-content: space-between;
-  /* border: 1px solid red; */
 }
-.logo-box {
-  margin: auto 0;
+.navbar-space {
+  margin-left: 550px;
 }
-.nav-lists {
-  display: flex;
-}
-.nav-lists ul {
-  display: flex;
-  margin: auto 0;
-}
-.nav-lists ul li {
-  list-style: none;
-  font-size: 17px;
+.navbar-nav {
   font-weight: bold;
-  margin-right: 25px;
+  font-size: 16px;
+  color: rgb(2, 56, 38);
 }
-.btn-box {
-  margin: auto 0;
-}
-.btn-box button {
-  padding: 5px 13px;
-  font-size: 18px;
-  border: none;
+button {
+  padding: 8px 22px;
+  font-size: 17px;
   outline: none;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  background-color: rgb(236, 236, 77);
 }

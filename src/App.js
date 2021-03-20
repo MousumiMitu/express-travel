@@ -29,6 +29,9 @@ function App() {
             <PrivateRoute path="/ride/:rideId">
               <RidingDetails />
             </PrivateRoute>
+            <PrivateRoute path="/rides">
+              <RidingDetails />
+            </PrivateRoute>
             <Route exact path="/">
               <Home />
             </Route>

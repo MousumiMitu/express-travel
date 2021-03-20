@@ -1,40 +1,54 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import data from "../../Data/Data.json";
+import riderData from "../../Data/Data.json";
 import "./RidingDetails.css";
 
 const RidingDetails = () => {
-  const { rideId } = useParams();
-  const [details, setDetails] = useState([]);
-  const [inputValue, setInputValue] = useState(false);
+  let { rideId } = useParams();
+  const [formInfo, setFormInfo] = useState(false);
 
-  useEffect(() => {
-    const riderDetails = data;
-    setDetails(riderDetails);
-    console.log(riderDetails);
-  }, []);
+  const ridingInfo = riderData.find((ride) => ride.name == rideId);
+  const { imgUrl, name, fare1, fare2, fare3 } = ridingInfo;
 
-  const handleBlur = (e) => {
-    console.log(e.target.value);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormInfo(!formInfo);
   };
+  // const handleBlur = (e) => {
+  //   const formValue = e.target.value;
+  //   // setFormInfo(formValue);
+  // };
 
   return (
     <div className="details-section">
       <div className="details-part">
         <div className="destination-form">
-          <label htmlFor="from">Pickup from</label>
-          <br />
-          <input type="text" name="from" onBlur={handleBlur} />
-          <br />
-          <label htmlFor="to">Pickup to</label>
-          <br />
-          <input type="text" name="to" onBlur={handleBlur} />
-          <br />
-          <input
-            type="submit"
-            onClick={() => setInputValue(true)}
-            value="Submit"
-          />
+          <form>
+            <label htmlFor="from">Pickup from</label>
+            <br />
+            <input type="text" name="from" required />
+            <br />
+            <label htmlFor="to">Pickup to</label>
+            <br />
+            <input type="text" name="to" required />
+            <br />
+            <button onClick={handleSubmit}>Submit</button>
+          </form>
+          <div className="fare-details">
+            {formInfo && <img src={imgUrl} alt="" />}
+            {formInfo && <p>{name}</p>}
+            {formInfo && <p>${fare1}</p>}
+          </div>
+          <div className="fare-details">
+            {formInfo && <img src={imgUrl} alt="" />}
+            {formInfo && <p>{name}</p>}
+            {formInfo && <p>${fare2}</p>}
+          </div>
+          <div className="fare-details">
+            {formInfo && <img src={imgUrl} alt="" />}
+            {formInfo && <p>{name}</p>}
+            {formInfo && <p>${fare3}</p>}
+          </div>
         </div>
         <div className="map-area">
           <iframe
