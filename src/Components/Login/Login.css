@@ -8,6 +8,7 @@ input {
   width: 100%;
   border: none;
   border-bottom: 1px solid rgb(2, 102, 52);
+  background-color: white;
 }
 .form-section {
   width: 37%;

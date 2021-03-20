@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import bikeImg from "../../images/Frame.png";
+import carImg from "../../images/car.png";
 
 const DestinationDetails = () => {
   const [formInfo, setFormInfo] = useState(false);
@@ -26,18 +26,18 @@ const DestinationDetails = () => {
               </button>
             </form>
             <div className="fare-details">
-              {formInfo && <img src={bikeImg} alt="" />}
-              {formInfo && <p>Motorcycle</p>}
+              {formInfo && <img src={carImg} alt="" />}
+              {formInfo && <p>Car</p>}
               {formInfo && <p>$50</p>}
             </div>
             <div className="fare-details">
-              {formInfo && <img src={bikeImg} alt="" />}
-              {formInfo && <p>Motorcycle</p>}
+              {formInfo && <img src={carImg} alt="" />}
+              {formInfo && <p>Car</p>}
               {formInfo && <p>$80</p>}
             </div>
             <div className="fare-details">
-              {formInfo && <img src={bikeImg} alt="" />}
-              {formInfo && <p>Motorcycle</p>}
+              {formInfo && <img src={carImg} alt="" />}
+              {formInfo && <p>Car</p>}
               {formInfo && <p>$150</p>}
             </div>
           </div>
