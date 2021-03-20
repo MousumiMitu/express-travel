@@ -1,14 +1,29 @@
 .login-area {
   margin: 0 auto;
-  border: 1px solid black;
-  padding: 20px;
+  padding: 0 20px;
+}
+input {
+  padding: 6px;
+  margin-bottom: 15px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgb(2, 102, 52);
 }
 .form-section {
-  width: 35%;
-  margin: 0 auto;
+  width: 37%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgb(246, 250, 246);
+  border-radius: 10px;
   text-align: center;
 }
 
+.submit-btn {
+  background-color: rgb(255, 60, 0);
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+}
 .login-btn {
   display: flex;
   justify-content: center;
@@ -17,9 +32,26 @@
 .login-btn button {
   outline: none;
   border: none;
+  padding: 0;
   background-color: white;
-  border-bottom: 1px solid black;
+  color: rgb(255, 60, 0);
   cursor: pointer;
   margin-left: 10px;
-  font-size: 15px;
+  margin-top: -20px;
+  font-size: 20px;
+}
+.google-btn {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px gray;
+}
+.google-btn img {
+  width: 10%;
+  margin: auto 0;
+  margin-right: 30px;
+}
+@media (max-width: 598px) {
+  .form-section {
+    width: 80%;
+  }
 }

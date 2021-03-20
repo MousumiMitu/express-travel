@@ -10,7 +10,7 @@
   justify-content: space-between;
 }
 .navbar-space {
-  margin-left: 550px;
+  margin-left: 480px;
 }
 .navbar-nav {
   font-weight: bold;
@@ -18,11 +18,16 @@
   color: rgb(2, 56, 38);
 }
 button {
-  padding: 8px 22px;
+  padding: 5px 15px;
   font-size: 17px;
   outline: none;
   border-radius: 5px;
   font-weight: bold;
   border: none;
   background-color: rgb(236, 236, 77);
+}
+@media (max-width: 598px) {
+  .navbar-space {
+    margin-left: 100px;
+  }
 }

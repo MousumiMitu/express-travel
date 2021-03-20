@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "imgUrl": "https://i.ibb.co/HtLW4f8/Frame.png",
+    "imgUrl": "https://i.ibb.co/gwDNWT2/motor.png",
     "fare1": 80,
     "fare2": 120,
     "fare3": 150,
@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "imgUrl": "https://i.ibb.co/1ZDLt6p/Frame-2.png",
+    "imgUrl": "https://i.ibb.co/VD7zfMK/car.png",
     "fare1": 150,
     "fare2": 200,
     "fare3": 350,
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "imgUrl": "https://i.ibb.co/sJGyF5c/Frame-1.png",
+    "imgUrl": "https://i.ibb.co/wS3Lx59/bus.png",
     "fare1": 10,
     "fare2": 50,
     "fare3": 80,
@@ -25,7 +25,7 @@
   },
   {
     "id": 4,
-    "imgUrl": "https://i.ibb.co/vjG2C7K/Group.png",
+    "imgUrl": "https://i.ibb.co/xYwVcqk/train.jpg",
     "fare1": 100,
     "fare2": 200,
     "fare3": 350,

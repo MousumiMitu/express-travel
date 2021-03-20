@@ -1,34 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
-import riderData from "../../Data/Data.json";
-import "./RidingDetails.css";
+import React, { useState } from "react";
+import bikeImg from "../../images/Frame.png";
 
-const RidingDetails = () => {
-  let { rideId } = useParams();
+const DestinationDetails = () => {
   const [formInfo, setFormInfo] = useState(false);
-
-  const ridingInfo = riderData.find((ride) => ride.name == rideId);
-  const { imgUrl, name, fare1, fare2, fare3 } = ridingInfo;
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormInfo(!formInfo);
   };
-  let showDate = new Date();
-  const displayDate =
-    showDate.getDate() +
-    "/" +
-    showDate.getMonth() +
-    "/" +
-    showDate.getFullYear();
   return (
     <div className="riding-container">
       <div className="details-section">
         <div className="details-part">
           <div className="destination-form">
             <form>
-              <input type="text" value={displayDate} />
-              <br />
               <label htmlFor="from">Pickup from</label>
               <br />
               <input type="text" name="from" required />
@@ -42,19 +26,19 @@ const RidingDetails = () => {
               </button>
             </form>
             <div className="fare-details">
-              {formInfo && <img src={imgUrl} alt="" />}
-              {formInfo && <p>{name}</p>}
-              {formInfo && <p>${fare1}</p>}
+              {formInfo && <img src={bikeImg} alt="" />}
+              {formInfo && <p>Motorcycle</p>}
+              {formInfo && <p>$50</p>}
             </div>
             <div className="fare-details">
-              {formInfo && <img src={imgUrl} alt="" />}
-              {formInfo && <p>{name}</p>}
-              {formInfo && <p>${fare2}</p>}
+              {formInfo && <img src={bikeImg} alt="" />}
+              {formInfo && <p>Motorcycle</p>}
+              {formInfo && <p>$80</p>}
             </div>
             <div className="fare-details">
-              {formInfo && <img src={imgUrl} alt="" />}
-              {formInfo && <p>{name}</p>}
-              {formInfo && <p>${fare3}</p>}
+              {formInfo && <img src={bikeImg} alt="" />}
+              {formInfo && <p>Motorcycle</p>}
+              {formInfo && <p>$150</p>}
             </div>
           </div>
           <div className="map-area">
@@ -70,4 +54,4 @@ const RidingDetails = () => {
   );
 };
 
-export default RidingDetails;
+export default DestinationDetails;

@@ -1,6 +1,6 @@
 .details-section {
   width: 90%;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 .details-part {
   display: flex;
@@ -20,10 +20,17 @@
   margin: 15px 0;
   outline: none;
   border: none;
-  width: 90%;
+  width: 98%;
 }
 .map-area {
   width: 65%;
+}
+.map-area iframe {
+  height: 550px;
+}
+.search-btn {
+  width: 100%;
+  background-color: rgb(255, 60, 0);
 }
 .fare-details {
   display: flex;
@@ -35,4 +42,34 @@
 }
 .fare-details img {
   width: 20%;
+}
+@media (max-width: 598px) {
+  .riding-container {
+    background-image: url("../../images/backg1.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  .details-part {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 10px auto;
+  }
+  .destination-form {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .fare-details {
+    margin: 5px 0;
+    padding: 10px 10px;
+  }
+  .fare-details img {
+    width: 15%;
+  }
+  .map-area {
+    width: 90%;
+  }
+  .map-area iframe {
+    height: 350px;
+  }
 }

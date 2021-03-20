@@ -7,6 +7,7 @@ import RidingDetails from "./Components/RidingDetails/RidingDetails";
 import Login from "./Components/Login/Login";
 import { createContext, useState } from "react";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import DestinationDetails from "./Components/DestinationDetails/DestinationDetails";
 
 export const UserContext = createContext();
 
@@ -30,7 +31,7 @@ function App() {
               <RidingDetails />
             </PrivateRoute>
             <PrivateRoute path="/rides">
-              <RidingDetails />
+              <DestinationDetails />
             </PrivateRoute>
             <Route exact path="/">
               <Home />

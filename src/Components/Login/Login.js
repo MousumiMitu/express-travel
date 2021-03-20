@@ -5,6 +5,7 @@ import firebaseConfig from "./firebase.Config";
 import { UserContext } from "../../App";
 import { useHistory, useLocation } from "react-router";
 import "./Login.css";
+import logo from "../../images/logo.png";
 
 const Login = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -48,7 +49,7 @@ const Login = () => {
     if (e.target.name === "email") {
       isFieldValid = /\S+@\S+\.\S+/.test(e.target.value);
     }
-    if (e.target.name === "password") {
+    if (e.target.name === "password" && "password2") {
       const isPasswordValid = e.target.value.length > 6;
       const passwordHasNumber = /\d{1}/.test(e.target.value);
       isFieldValid = isPasswordValid && passwordHasNumber;
@@ -148,7 +149,21 @@ const Login = () => {
           required
         />
         <br />
-        <input type="submit" value={createUser ? "Create account" : "Login"} />
+        {createUser && (
+          <input
+            type="password"
+            name="password2"
+            onBlur={handleBlur}
+            placeholder="confirm password"
+            required
+          />
+        )}
+        <br />
+        <input
+          className="submit-btn"
+          type="submit"
+          value={createUser ? "Create account" : "Login"}
+        />
       </form>
       <div className="login-btn">
         <p>
@@ -158,8 +173,10 @@ const Login = () => {
           {createUser ? "Login" : "Create an account"}
         </button>
       </div>
-      <br />
-      <button onClick={handleGoogleSignIn}>sign in with google</button>
+      <hr />
+      <button className="google-btn" onClick={handleGoogleSignIn}>
+        <img src={logo} /> continue with google
+      </button>
       <p style={{ color: "red" }}>{user.error}</p>
       {user.success && (
         <p style={{ color: "green" }}>
