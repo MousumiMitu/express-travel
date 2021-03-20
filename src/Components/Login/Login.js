@@ -10,11 +10,16 @@ import logo from "../../images/logo.png";
 const Login = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const [createUser, setCreateUser] = useState(false);
+  const [passwordMatch, setPasswordMatch] = useState({
+    errorMsg: "",
+  });
   const [user, setUser] = useState({
     name: "",
     email: "",
     password: "",
+    password2: "",
     error: "",
+
     success: false,
   });
   const history = useHistory();
@@ -44,8 +49,9 @@ const Login = () => {
       });
   };
 
-  const handleBlur = (e) => {
+  const handleChange = (e) => {
     let isFieldValid = true;
+
     if (e.target.name === "email") {
       isFieldValid = /\S+@\S+\.\S+/.test(e.target.value);
     }
@@ -58,6 +64,18 @@ const Login = () => {
       const newUserInfo = { ...user };
       newUserInfo[e.target.name] = e.target.value;
       setUser(newUserInfo);
+    }
+
+    if (user.password !== user.password2) {
+      let passwordCheck = { ...passwordMatch };
+      passwordCheck.errorMsg = "";
+      passwordCheck.errorMsg = "password is not matched";
+      setPasswordMatch(passwordCheck);
+    }
+    if (user.password == user.password2) {
+      let passwordCheck = { ...passwordMatch };
+      passwordCheck.errorMsg = "";
+      setPasswordMatch(passwordCheck);
     }
   };
   const handleSubmit = (e) => {
@@ -128,7 +146,7 @@ const Login = () => {
           <input
             type="text"
             name="name"
-            onBlur={handleBlur}
+            onBlur={handleChange}
             placeholder="name"
           />
         )}
@@ -136,7 +154,7 @@ const Login = () => {
         <input
           type="text"
           name="email"
-          onBlur={handleBlur}
+          onBlur={handleChange}
           placeholder="email"
           required
         />
@@ -144,7 +162,7 @@ const Login = () => {
         <input
           type="password"
           name="password"
-          onBlur={handleBlur}
+          onBlur={handleChange}
           placeholder="password"
           required
         />
@@ -153,11 +171,12 @@ const Login = () => {
           <input
             type="password"
             name="password2"
-            onBlur={handleBlur}
+            onBlur={handleChange}
             placeholder="confirm password"
             required
           />
         )}
+        <p>{passwordMatch.errorMsg}</p>
         <br />
         <input
           className="submit-btn"
@@ -177,6 +196,7 @@ const Login = () => {
       <button className="google-btn" onClick={handleGoogleSignIn}>
         <img src={logo} /> continue with google
       </button>
+
       <p style={{ color: "red" }}>{user.error}</p>
       {user.success && (
         <p style={{ color: "green" }}>
