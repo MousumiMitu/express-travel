@@ -6,7 +6,8 @@ Express Travel is a simple react router project where form validation is used wi
 
 - Used email & password authentication
 - Can login by both email & google also create new account
-- Create private route to when they want to book the rides
+- Use private route and they have to login when they want to book the rides
+- User get different available fairs for selective rides
 - Little bit Responsive
 - also used google map
 
